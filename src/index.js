@@ -1,17 +1,75 @@
-import React from 'react';
-import ReactDOM from 'react-dom';
-import './index.css';
-import App from './App';
-import * as serviceWorker from './serviceWorker';
+import React from "react";
+import ReactDOM from "react-dom";
+import "semantic-ui-css/semantic.min.css";
+import CommentHeader from "./Components/CommentHeader";
+import CommentDetail from "./Components/CommentDetail";
+import {
+  joseTime,
+  alejandroTime,
+  omarTime,
+  joseComment,
+  alejandroComment,
+  omarComment,
+  fakeNameOne,
+  fakeNameTwo,
+  fakeNameThree,
+  fakeNameFive,
+  fakeNameSix,
+  fakeNameSeven,
+  fakeComment1,
+  fakeComment2,
+  fakeComment3,
+  fakeComment4,
+  randomTime,
+  randomTime1,
+  randomTime2,
+  randomTime3,
+} from "./util/fakeData";
+import RefreshButton from "./util/RefreshButton";
 
-ReactDOM.render(
-  <React.StrictMode>
-    <App />
-  </React.StrictMode>,
-  document.getElementById('root')
-);
+const App = () => {
+  console.log(randomTime);
+  return (
+    <div className="ui container comments">
+      <CommentHeader />
+      <CommentDetail
+        author={fakeNameOne}
+        comment={joseComment}
+        time={joseTime}
+      />
+      <CommentDetail
+        author={fakeNameTwo}
+        comment={alejandroComment}
+        time={alejandroTime}
+      />
+      <CommentDetail
+        author={fakeNameThree}
+        comment={omarComment}
+        time={omarTime}
+      />
+      <CommentDetail
+        author={fakeNameThree}
+        comment={fakeComment1}
+        time={randomTime}
+      />
+      <CommentDetail
+        author={fakeNameFive}
+        comment={fakeComment2}
+        time={randomTime1}
+      />
+      <CommentDetail
+        author={fakeNameSix}
+        comment={fakeComment3}
+        time={randomTime2}
+      />
+      <CommentDetail
+        author={fakeNameSeven}
+        comment={fakeComment4}
+        time={randomTime3}
+      />
+      <RefreshButton />
+    </div>
+  );
+};
 
-// If you want your app to work offline and load faster, you can change
-// unregister() to register() below. Note this comes with some pitfalls.
-// Learn more about service workers: https://bit.ly/CRA-PWA
-serviceWorker.unregister();
+ReactDOM.render(<App />, document.querySelector("#root"));
