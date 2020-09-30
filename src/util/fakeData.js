@@ -2,33 +2,44 @@ import moment from "moment";
 import faker from "faker";
 
 //fake time
-export const joseTime = moment().startOf("day").fromNow();
-export const alejandroTime = moment().startOf("hour").fromNow();
-export const omarTime = moment().subtract(6, "days").calendar();
-export const randomTime = moment().subtract(1, "hours").calendar();
-export const randomTime1 = moment().subtract(2, "hours").calendar();
-export const randomTime2 = moment().subtract(1, "hours").calendar();
-export const randomTime3 = moment().subtract(2, "hours").calendar();
+export const time = {
+  joseTime: moment().startOf("day").fromNow(),
+  alejandroTime: moment().startOf("hour").fromNow(),
+  omarTime: moment().subtract(6, "days").calendar(),
+  randomTime: moment().subtract(1, "hours").calendar(),
+  randomTime1: moment().subtract(2, "hours").calendar(),
+  randomTime2: moment().subtract(1, "hours").calendar(),
+  randomTime3: moment().subtract(2, "hours").calendar(),
+};
+
 //fake names
-export const fakeNameOne = faker.name.firstName();
-export const fakeNameTwo = faker.name.firstName();
-export const fakeNameThree = faker.name.firstName();
-export const fakeNameFive = faker.name.firstName();
-export const fakeNameSix = faker.name.firstName();
-export const fakeNameSeven = faker.name.firstName();
+export const usersName = {
+  fakeNameOne: faker.name.firstName(),
+  fakeNameTwo: faker.name.firstName(),
+  fakeNameThree: faker.name.firstName(),
+  fakeNameFive: faker.name.firstName(),
+  fakeNameSix: faker.name.firstName(),
+  fakeNameSeven: faker.name.firstName(),
+};
+
 //fake comment
-export const fakeComment1 = faker.hacker.phrase();
-export const fakeComment2 = faker.hacker.phrase();
-export const fakeComment3 = faker.hacker.phrase();
-export const fakeComment4 = faker.hacker.phrase();
-export const joseComment = faker.hacker.phrase();
-export const alejandroComment = faker.hacker.phrase();
-export const omarComment = faker.hacker.phrase();
+export const fakeComment = {
+  fakeComment1: faker.hacker.phrase(),
+  fakeComment2: faker.hacker.phrase(),
+  fakeComment3: faker.hacker.phrase(),
+  fakeComment4: faker.hacker.phrase(),
+  joseComment: faker.hacker.phrase(),
+  alejandroComment: faker.hacker.phrase(),
+  omarComment: faker.hacker.phrase(),
+};
+
 //image
-export const image1 = faker.image.avatar();
-export const image2 = faker.image.avatar();
-export const image3 = faker.image.avatar();
-export const image4 = faker.image.avatar();
-export const image5 = faker.image.avatar();
-export const image6 = faker.image.avatar();
-export const image7 = faker.image.avatar();
+export const avatarImages = {
+  image1: faker.image.avatar(),
+  image2: faker.image.avatar(),
+  image3: faker.image.avatar(),
+  image4: faker.image.avatar(),
+  image5: faker.image.avatar(),
+  image6: faker.image.avatar(),
+  image7: faker.image.avatar(),
+};
