@@ -24,3 +24,11 @@ export const fakeComment4 = faker.hacker.phrase();
 export const joseComment = faker.hacker.phrase();
 export const alejandroComment = faker.hacker.phrase();
 export const omarComment = faker.hacker.phrase();
+//image
+export const image1 = faker.image.avatar();
+export const image2 = faker.image.avatar();
+export const image3 = faker.image.avatar();
+export const image4 = faker.image.avatar();
+export const image5 = faker.image.avatar();
+export const image6 = faker.image.avatar();
+export const image7 = faker.image.avatar();
